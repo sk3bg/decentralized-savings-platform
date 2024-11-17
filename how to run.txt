@@ -1,0 +1,24 @@
+Windows PowerShell
+
+First Command Window: to start hardhat server
+cd C:\Dev\decentralized-savings-platform\MyDapp
+PS C:\Dev\decentralized-savings-platform\MyDapp> npx hardhat node
+
+Second Command Window: to deploy contract
+cd C:\dev\decentralized-savings-platform\MyDapp
+PS C:\dev\decentralized-savings-platform\MyDapp> npx hardhat run scripts/deploy.js --network localhost
+
+make sure this command produces this address:
+SavingsGoals deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+
+Third Command Window: (to start react app front end)
+cd C:\Dev\decentralized-savings-platform\frontend-react-app
+PS C:\Dev\decentralized-savings-platform\frontend-react-app> npm start
+
+-----------------------------------
+Open Metamask, click on 3 dots on right corner
+click "Settings" then click "Advanced"
+Click "Clear activity tab data"
+--------------------------------------
+now you access UI http://localhost:3000/ and create Goal.
