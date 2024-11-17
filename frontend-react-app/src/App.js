@@ -77,29 +77,30 @@ const App = () => {
           <p>Connected Account: {account}</p>
         </div>
       )}
+      {contract && (
+        <div className="container">
+          <div className="left-section">
+            {contract && (
+              <>
+                <SavingsGoalForm contract={contract} account={account} />
+                <ContributionForm contract={contract} account={account} />
+                <SavingsProgress contract={contract} account={account} />
+              </>
+            )}
+          </div>
 
-      <div className="container">
-        <div className="left-section">
-          {contract && (
-            <>
-              <SavingsGoalForm contract={contract} account={account} />
-              <ContributionForm contract={contract} account={account} />
-              <SavingsProgress contract={contract} account={account} />
-            </>
-          )}
+          <div className="right-section">
+            {contract && (
+              <>
+                <CheckBalance contract={contract} />
+                <TransferTokens contract={contract} account={account} />
+                <MintTokens contract={contract} account={account} />
+                <ApproveTokens contract={contract} account={account} />
+              </>
+            )}
+          </div>
         </div>
-
-        <div className="right-section">
-          {contract && (
-            <>
-              <CheckBalance contract={contract} />
-              <TransferTokens contract={contract} account={account} />
-              <MintTokens contract={contract} account={account} />
-              <ApproveTokens contract={contract} account={account} />
-            </>
-          )}
-        </div>
-      </div>
+      )}
     </div>
   );
 };
