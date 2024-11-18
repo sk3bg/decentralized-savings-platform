@@ -1,4 +1,5 @@
 Windows PowerShell
+NOTE: If you clone code from GitHub repository then follow README.md first.
 
 First Command Window: to start hardhat server
 cd C:\Dev\decentralized-savings-platform\MyDapp
